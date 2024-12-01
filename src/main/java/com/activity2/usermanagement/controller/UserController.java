@@ -22,7 +22,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/")
-    public String listUsers(Model model) {
+    public String home(Model model) {
         model.addAttribute("users", userRepository.findAll());
         return "user-list";
     }
